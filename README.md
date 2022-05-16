@@ -10,3 +10,25 @@
 * 7 java.io 和 java.nio 可以结合着看 
 * 8 java.time 主要包含时间相关的类，可以学习下 Java 8 新增的几个
 * 9 java.net 包下为网络通信相关的类，可以阅读下 Socket 和 HTTPClient 相关代码
+
+### 1.1 java.lang.Integer
+1. 两种单例模式的构建（前提：私有化构造方法）
+    ```java
+   //第一种,在需要时通过.instance来实例化对象
+    CharacterDataLatin1.instance;
+   //...
+    static final CharacterDataLatin1 instance = new CharacterDataLatin1();
+    private CharacterDataLatin1() {};
+   
+   //第二种，通过getInstance()方法来构造
+   //...
+   public static Object instance;
+   public static Object getInstance(){
+        if(instance==null){
+            instance=new Object();
+        }
+        return instance;
+   }
+    ```
+    通过单例模式，一个类只可以创建一个实例，并且是通过自己创建该实例，创建后该实例将被供给给其他对象服务，除此以外，还有四种单例模式的构建方法。。。。此处不与赘述，等啥时候看到那了再分析。
+2.
